@@ -13,13 +13,35 @@ UEIR-Gated RAG Pipeline — an NLP/RAG application that uses UEIR v3.5 forbidden
 | `COEN803_Solo_entry.py` | Main submission file — scorecard, application, break report |
 | `ueir_v3_5.py` | UEIR v3.5 reference library (do not modify) |
 | `requirements.txt` | Python dependencies |
-| `.env` | API key (do not include in submission zip) |
+| `.env` | API key |
 
 ---
 
 ## Setup
+### 1. Create and activate a virtual environment
 
-### 1. Install dependencies
+macOS/Linux:
+
+```bash
+python3 -m venv env
+source env/bin/activate
+```
+
+Windows Command Prompt:
+
+```bat
+py -m venv env
+env\Scripts\activate
+```
+
+Windows PowerShell:
+
+```powershell
+py -m venv env
+.\env\Scripts\Activate.ps1
+```
+
+### 2. Install dependencies
 
 ```bash
 pip3 install -r requirements.txt
@@ -31,7 +53,7 @@ Or install manually:
 pip3 install anthropic numpy scipy
 ```
 
-### 2. Add your Anthropic API key
+### 3. Add your Anthropic API key
 
 Create a `.env` file in the project folder:
 
@@ -39,10 +61,26 @@ Create a `.env` file in the project folder:
 ANTHROPIC_API_KEY=sk-ant-...
 ```
 
-### 3. Run
+### 4. Run the program
+
+macOS/Linux:
 
 ```bash
 export $(cat .env | xargs) && python3 COEN803_Solo_entry.py
+```
+
+Windows Command Prompt:
+
+```bat
+set ANTHROPIC_API_KEY=your_api_key_here
+python COEN803_Solo_entry.py
+```
+
+Windows PowerShell:
+
+```powershell
+$env:ANTHROPIC_API_KEY = "your_api_key_here"
+python COEN803_Solo_entry.py
 ```
 
 ---
@@ -140,9 +178,3 @@ The provided excerpts do not contain information about how retrieval quality is
 measured (e.g., precision, recall, NDCG, MRR). Additional documentation would
 be needed to fully answer that aspect.
 ```
-
----
-
-## Submission
-
-Zip as `COEN803_Solo_AbdulhameedYunusa.zip`. Do **not** include `ueir_v3_5.py` or `.env`.
