@@ -297,4 +297,3 @@ if __name__ == "__main__":
         else:
             print(f"  {key:<14s}   : {val}")
     print()
-    print("Done. Submit as COEN803_Solo_[YourName].zip")

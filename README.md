@@ -2,7 +2,7 @@
 
 ## Overview
 
-UEIR-Gated RAG Pipeline — an NLP/RAG application that uses UEIR v3.5 forbidden-band gating as a real document filtering decision. Chunks whose UEIR conductance (phi) falls in the forbidden band `(0.5, 0.6]` are excluded from the LLM context window before answering a query.
+UEIR-Gated RAG Pipeline : an NLP/RAG application that uses UEIR v3.5 forbidden-band gating as a real document filtering decision. Chunks whose UEIR conductance (phi) falls in the forbidden band `(0.5, 0.6]` are excluded from the LLM context window before answering a query.
 
 ---
 
